@@ -3,7 +3,6 @@
     test_FileReader
     Test suite for FileReader module
 """
-export PYTHONPATH = $PWD/../src
 import unittest
 import FileReader
 import os
@@ -19,9 +18,9 @@ class test_FileReader(unittest.TestCase):
     def test_get_filenames(self):
 
         # verify that a list is returned
-        self.assertTrue(isinstance(FileReader.getFileNames(),list))
+        self.assertTrue(isinstance(FileReader.getFileNames('*'),list))
         # verify that the list is long enough
-        filenames = FileReader.getFileNames()
+        filenames = FileReader.getFileNames('*')
         self.assertTrue(len(filenames) > 0)
         # verify that the list don't contain directorys
         for filename in filenames:
