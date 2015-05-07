@@ -18,5 +18,4 @@ def getFileNames(path):
 
 if __name__ == "__main__":
     filenames = getFileNames(sys.argv[1])
-    print sys.argv[1]
     print filenames
