@@ -3,7 +3,6 @@
     test_FileReader
     Test suite for FileReader module
 """
-export PYTHONPATH = $PWD/../src
 import unittest
 import FileReader
 import os
